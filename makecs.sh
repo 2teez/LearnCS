@@ -20,7 +20,7 @@ function help() {
     echo "-T    run a unit test for a named c# project"
     echo "-m    manually compiling and running a c# standalone file"
     echo "-l    create a library project folder and link with the project to use it."
-    echo "-W    load the web development ASP.NET in `watch` Mode."
+    echo "-W    load the web development ASP.NET in 'watch' Mode."
     echo "-w    create a web project namely: ASP.NET MVC, ASP.NET CORE MVC/Razor (webApp) OR WebAPI"
 }
 
