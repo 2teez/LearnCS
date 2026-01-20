@@ -25,13 +25,21 @@ class Program
 
     static string getUserInput(string msg) {
         Console.Write(msg);
-        string input = Console.ReadLine();
-        while (input.Length == 0)
+        string input = Console.ReadLine() ?? "";
+        while (!isEmpty(input))
         {
             Console.WriteLine("Empty string can't be used.");
             Console.Write(msg);
             input = Console.ReadLine();
         }
         return input;
+    }
+
+    static bool isEmpty(string str) {
+        if (str.Length == 0)
+        {
+            return false;
+        }
+        return true;
     }
 }
