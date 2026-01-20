@@ -14,11 +14,10 @@ Console.WriteLine($"Using \"Convert.ToInt\" function.{Environment.NewLine}I am {
 
 // 3. using TryParse function
 input = getUserInput("Enter another age: ");
-//age = Convert.ToInt32(input);
 if (int.TryParse(input, out int n_age))
 {
     Console.WriteLine(
-        $"Using \"Convert.ToInt\" function.{Environment.NewLine}I am {n_age} years Old.");
+        $"Using \"int.TryParse\" function.{Environment.NewLine}I am {n_age} years Old.");
 }
 else
 {
@@ -32,7 +31,7 @@ static string getUserInput(string msg)
 {
     Console.Write(msg);
     string input = Console.ReadLine();
-    while(!isEmpty(input))
+    while(isEmpty(input))
     {
         Console.WriteLine("Empty string can't be used.");
         Console.Write(msg);
@@ -43,9 +42,5 @@ static string getUserInput(string msg)
 
 static bool isEmpty(string str)
 {
-    if (str.Length == 0)
-    {
-        return false;
-    }
-    return true;
+    return str.Length == 0;
 }
