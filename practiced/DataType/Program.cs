@@ -26,6 +26,12 @@ class Program
     static string getUserInput(string msg) {
         Console.Write(msg);
         string input = Console.ReadLine();
+        while (input.Length == 0)
+        {
+            Console.WriteLine("Empty string can't be used.");
+            Console.Write(msg);
+            input = Console.ReadLine();
+        }
         return input;
     }
 }
