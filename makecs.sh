@@ -13,6 +13,7 @@ function help() {
     echo "-r    remove project bin folder"
     echo "-n    remove the entire project folder"
     echo "-p    add package from NuGet to the project"
+    echo "-g    create a generic standalone cs file"
     echo "-h    display the help function"
     echo "-S    create a solution file in C #"
     echo "-s    run a c# script. The script can have either .csx or .cs file extension."
@@ -35,6 +36,27 @@ if [[ $# -ne 2 ]]; then
     help
     exit 1
 fi
+
+function standalone_cs_file(){
+    filename="${1}"
+    file="${filename%.*}"
+    file_extension="${filename#*.}"
+    if [[ "${file}" == "${file_extension}" ]]; then
+        file="${file^}.cs"
+    fi
+    touch "${file}"
+echo "
+using System;
+
+class ${file%.*}
+{
+    public static void Main()
+    {
+        Console.WriteLine(\"Start Here!\");
+    }
+}
+    " > "${file}"
+}
 
 function remove_unwanted_folders(){
     target_folder="${1}"
@@ -97,7 +119,7 @@ function make_html_file() {
     " > "${1}"
 }
 
-options="A:a:c:C:r:n:b:s:S:m:l:p:w:W:t:T:"
+options="A:a:c:C:r:n:g:b:s:S:m:l:p:w:W:t:T:h"
 while getopts ${options} opt; do
     case $opt in
         A) # add a project to a solution file
@@ -138,6 +160,11 @@ while getopts ${options} opt; do
             ##
             dotnet sln add "${OPTARG}"
             dotnet build "${OPTARG}"
+            ;;
+        g)
+            ## create a generic cs file
+            filename="${OPTARG}"
+            standalone_cs_file "${filename}"
             ;;
         r)
             # call function list and delete
