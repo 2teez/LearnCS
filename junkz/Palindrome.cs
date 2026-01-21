@@ -4,7 +4,18 @@ class Palindrome
 {
     public static void Main()
     {
-        string palinString = getUserInput("Enter a string: ");
+        string str = getUserInput("Enter a string: ");
+        var plainString = str.Replace(" ", "").ToLower();
+        var reversedString = plainString.ToCharArray();
+        Array.Reverse(reversedString);
+        if (plainString == new string(reversedString))
+        {
+            Console.WriteLine($"\'{str}\' is a Palindrome string.");
+        }
+        else
+        {
+             Console.WriteLine($"\'{str}\' is NOT a Palindrome string.");
+        }
     }
 
     static string getUserInput(string msg)
