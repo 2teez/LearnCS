@@ -8,5 +8,9 @@ class Program
         Console.WriteLine(employee);
         employee.SetName("Java", "Gosling");
         Console.WriteLine(employee);
+        // employee saved.
+        employee.Save();
+        var savedEmployee = DataStorage.Load("Java", "Gosling");
+        Console.WriteLine($"{savedEmployee}");
     }
 }
