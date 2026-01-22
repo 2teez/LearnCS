@@ -1,11 +1,11 @@
 using System;
-using PersonDefClass;
 
 class PracticedClass
 {
     public static void Main()
     {
-        PersonDefClass.Person p = new Person() { Age = 24 };
+        // using a default constructor in cs
+        PersonDefClass.Person p = new PersonDefClass.Person() { Age = 24 };
         p.FirstName = "Java";
         p.LastName = "Gosling";
         Console.WriteLine(p);
