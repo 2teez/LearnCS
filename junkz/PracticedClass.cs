@@ -27,14 +27,14 @@ namespace PersonDefClass
 
 namespace PersonClassWithCons
 {
-    class Person
+    class Person(string firstName, string lastName, int age = 0)
     {
-        public Person(string firstName, string lastName, int age = 0)
+        /*public Person(string firstName, string lastName, int age = 0)
         {
             FirstName = firstName;
             LastName = lastName;
             Age = age;
-        }
+            }*/
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int? Age { get; private set; } = 0;
