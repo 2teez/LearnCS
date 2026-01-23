@@ -24,3 +24,22 @@ namespace PersonDefClass
             $"Person: firstname = {FirstName}, lastname = {LastName}, age = {Age}.";
     }
 }
+
+namespace PersonClassWithCons
+{
+    class Person
+    {
+        public Person(string firstName, string lastName, int age = 0)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Age = age;
+        }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int? Age { get; private set; } = 0;
+
+        public override string ToString() =>
+            $"Person: firstname = {FirstName}, lastname = {LastName}, age = {Age}.";
+    }
+}
