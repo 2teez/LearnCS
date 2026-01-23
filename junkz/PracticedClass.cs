@@ -29,15 +29,16 @@ namespace PersonClassWithCons
 {
     class Person(string firstName, string lastName, int age = 0)
     {
+        // using c#12 merged the class and it seprate constructor
         /*public Person(string firstName, string lastName, int age = 0)
         {
             FirstName = firstName;
             LastName = lastName;
             Age = age;
             }*/
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public int? Age { get; private set; } = 0;
+        public string FirstName { get; set; } = firstName;
+        public string LastName { get; set; } = lastName;
+        public int? Age { get; } = age;
 
         public override string ToString() =>
             $"Person: firstname = {FirstName}, lastname = {LastName}, age = {Age}.";
