@@ -38,7 +38,7 @@ namespace PersonClassWithCons
             }*/
         public string FirstName { get; set; } = firstName;
         public string LastName { get; set; } = lastName;
-        public int? Age { get; } = age;
+        public int Age { get; } = age;
 
         public override string ToString() =>
             $"Person: firstname = {FirstName}, lastname = {LastName}, age = {Age}.";
