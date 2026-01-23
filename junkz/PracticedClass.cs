@@ -9,6 +9,9 @@ class PracticedClass
         p.FirstName = "Java";
         p.LastName = "Gosling";
         Console.WriteLine(p);
+        //
+        PersonClassWithCons.Person p2 = new PersonClassWithCons.Person(firstName: "Perl", lastName: "Larry", age: 34);
+        Console.WriteLine(p2);
     }
 }
 
