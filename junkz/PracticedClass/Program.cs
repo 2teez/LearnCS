@@ -12,6 +12,11 @@ class PracticedClass
         //
         PersonClassWithCons.Person p2 = new PersonClassWithCons.Person(firstName: "Perl", lastName: "Larry", age: 34);
         Console.WriteLine(p2);
+        //
+        // PersonWithStaticField
+        var p3 = new PersonWithStaticField.Person(firstName: "Elixir", lastName: "Jose");
+        Console.WriteLine(PersonWithStaticField.Person.PersonId);
+        var p3_1 = new PersonWithStaticField.Person(firstName: "Java", lastName: "Gosling");
     }
 }
 
@@ -45,5 +50,15 @@ namespace PersonClassWithCons
 
         public override string ToString() =>
             $"Person: firstname = {FirstName}, lastname = {LastName}, age = {Age}.";
+    }
+}
+
+namespace PersonWithStaticField
+{
+    class Person(string firstName, string? lastName)
+    {
+        public static int PersonId { get; } = _PersonId += 1;
+        public string Name { get; } = firstName + (lastName ?? "");
+        private static int _PersonId = 0;
     }
 }
