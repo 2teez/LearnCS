@@ -17,6 +17,7 @@ class PracticedClass
         var p3 = new PersonWithStaticField.Person(firstName: "Elixir", lastName: "Jose");
         Console.WriteLine(PersonWithStaticField.Person.PersonId);
         var p3_1 = new PersonWithStaticField.Person(firstName: "Java", lastName: "Gosling");
+        Console.WriteLine(PersonWithStaticField.Person.PersonId);
     }
 }
 
@@ -57,8 +58,11 @@ namespace PersonWithStaticField
 {
     class Person(string firstName, string? lastName)
     {
-        public static int PersonId { get; } = _PersonId += 1;
+        public static int PersonId
+        {
+            get => ++_personId;
+        }
         public string Name { get; } = firstName + (lastName ?? "");
-        private static int _PersonId = 0;
+        private static int _personId = 0;
     }
 }
