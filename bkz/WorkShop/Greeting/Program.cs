@@ -6,11 +6,18 @@ namespace Greeting
     {
         public static void Main()
         {
-            var name = GetName("Enter your name: ");
+            var name = GetInput("Enter your name: ");
             Console.WriteLine($"{TitleCase(name)}, we would go a long way in C#!.");
+            // comparing string
+            var first = GetInput();
+            string second = first;
+            first = null;
+            Console.WriteLine($"{first} <> {second}.");
+            Console.WriteLine($"first == second: {first == second}.");
+            Console.WriteLine($"string.Equals(first,second): {string.Equals(first, second)}.");
         }
 
-        static string GetName(string msg = "Enter: ")
+        static string GetInput(string msg = "Enter: ")
         {
             string input;
             do
