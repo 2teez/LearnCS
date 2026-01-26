@@ -14,7 +14,7 @@ namespace Greeting
             first = null;
             Console.WriteLine($"{first} <> {second}.");
             Console.WriteLine($"first == second: {first == second}.");
-            Console.WriteLine($"string.Equals(first,second): {string.Equals(first, second)}.");
+            Console.WriteLine($"string.Equals({first},{second}): {string.Equals(first, second)}.");
         }
 
         static string GetInput(string msg = "Enter: ")
