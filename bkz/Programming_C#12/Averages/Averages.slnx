@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Averages.Tests/Averages.Tests.csproj" />
+  <Project Path="Averages/Averages.csproj" />
+</Solution>
