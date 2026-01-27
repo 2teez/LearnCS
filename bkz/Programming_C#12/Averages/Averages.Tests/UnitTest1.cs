@@ -8,8 +8,18 @@ public class Tests
     }
 
     [Test]
-    public void Test1()
+    public void SingleInputShouldProduceSameOutput()
     {
-        Assert.Pass();
+        string[] inputs = { "1" };
+        var result = AverageCalculator.ArithmeticMean(inputs) - 1.0;
+        Assert.That(result, Is.EqualTo(1.0).Within(1E-14));
+    }
+
+    [Test]
+    public void MultipleInputShouldProduceAverageAsResult()
+    {
+        string[] inputs = { "1", "2", "3", "4" };
+        var result = AverageCalculator.ArithmeticMean(inputs);
+        Assert.That(result, Is.EqualTo(2.0).Within(1E-14));
     }
 }
