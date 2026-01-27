@@ -1,9 +1,12 @@
 ﻿namespace Averages;
 
-class Program
+using static AverageCalculator;
+
+public class Program
 {
-    internal static void Main(string[] args)
+    public static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        var nums = new string[] { "4.3", "2.15", "0.95" };
+        Console.WriteLine(ArithmeticMean(nums));
     }
 }
