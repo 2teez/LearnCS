@@ -16,4 +16,9 @@ public static class AverageCalculator
         }
         return sum;
     }
+
+    public static double ArithmeticAverage(string[] values)
+    {
+        return values.Select(arg => double.Parse(arg)).Average();
+    }
 }
