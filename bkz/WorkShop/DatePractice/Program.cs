@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 namespace MainClass
 {
     using PracticeDateTime;
@@ -7,7 +8,9 @@ namespace MainClass
         public static void Main(string[] args)
         {
             Person person = new() { Name = "Java", BirthYear = 1990 };
-            Console.WriteLine(person);
+            Person person2 = new() { Name = "Elixir", BirthYear = 1980 };
+            Console.WriteLine($"{person}, {person2}");
+            Console.WriteLine(person.Equals(person));
         }
     }
 }
@@ -27,15 +30,14 @@ namespace PracticeDateTime
 
         public override bool Equals(object? obj)
         {
-            var p = (Person)obj;
-            if (p != null)
+            if (obj is not Person p)
             {
                 return false;
             }
-            return this.Name == p?.Name && this.BirthYear == p?.BirthYear;
+            return this.Name == p.Name && this.BirthYear == p.BirthYear;
         }
 
-        public override int GetHashCode() => base.GetHashCode();
+        public override int GetHashCode() => HashCode.Combine(Name, BirthYear);
         public override string ToString() => $"Person: Name: {Name}, Age: {GetAge()}";
     }
 }
