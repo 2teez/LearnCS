@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace Averages;
+
+class Program
+{
+    internal static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}
