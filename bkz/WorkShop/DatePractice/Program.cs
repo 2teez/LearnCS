@@ -11,6 +11,7 @@ namespace MainClass
             Person person2 = new() { Name = "Elixir", BirthYear = 1980 };
             Console.WriteLine($"{person}, {person2}");
             Console.WriteLine(person.Equals(person));
+            Console.WriteLine(person == person2);
         }
     }
 }
@@ -39,5 +40,10 @@ namespace PracticeDateTime
 
         public override int GetHashCode() => HashCode.Combine(Name, BirthYear);
         public override string ToString() => $"Person: Name: {Name}, Age: {GetAge()}";
+        // static operator == and !=
+        public static bool operator ==(Person? p1, Person? p2)
+          => EqualityComparer<Person>.Default.Equals(p1, p2);
+
+        public static bool operator !=(Person? p1, Person? p2) => !(p1 == p2);
     }
 }
