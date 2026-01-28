@@ -203,7 +203,21 @@ while getopts ${options} opt; do
             done
             ;;
         t) # create a unit test for a named csharp project
-            dotnet new nunit -o "${OPTARG}"
+           # using either mstest or nunit test framework
+            while read -p "Which test framework you want? NUnit or MStest [n|m]: " ans; do
+                case "${ans}" in
+                    n)
+                        dotnet new nunit -o "${OPTARG}"
+                        exit 0
+                        ;;
+                    m)
+                        dotnet new mstest -o "${OPTARG}"
+                        exit 0
+                        ;;
+                    *) echo "You can only use either N for NUnit or M for MStest."
+                    ;;
+                esac
+            done
             ;;
         T) # run a unit test project for c#
             dotnet test "${OPTARG}"
