@@ -1,6 +1,4 @@
-﻿
-using System;
-namespace PracticeRecord;
+﻿namespace PracticeRecord;
 
 class Program
 {
@@ -8,6 +6,8 @@ class Program
     {
         var java = new Person(Name: "Java", Age: 42);
         ShowPerson(java);
+        var elixir = new Person(Age: 12, Name: "Elixir");
+        ShowPerson(elixir);
     }
 
     internal static void ShowPerson(Person p)
