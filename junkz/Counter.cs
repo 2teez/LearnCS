@@ -8,11 +8,13 @@ class Counter
         NumberGenerator counter = new();
         var counter2 = new NumberGenerator(5);
         var counter3 = NumberGeneratorWithPrivateConstructor.GetInstance(10);
+        var counter4 = NumberGeneratorWithPrivateConstructor.GetInstance();
         for (var i = 0; i < 5; i++)
         {
             Console.WriteLine($"{counter}: {counter.GetNextValue}");
             Console.WriteLine($"{counter2}: {counter2.GetNextValue}");
             Console.WriteLine($"{counter3}: {counter3.GetNextValue}");
+            Console.WriteLine($"{counter4}: {counter4.GetNextValue}");
         }
     }
 }
