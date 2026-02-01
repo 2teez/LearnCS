@@ -14,7 +14,7 @@ public class InOutRef
         int anValue = DivMod(8, 5, out int anRemainder);
         Console.WriteLine($"{anValue}, {anRemainder}");
         Swapper(ref value, ref remainder);
-        Console.WriteLine($"After Swap: {value}, {remainder}");
+        Console.WriteLine($"{"after Swap".ToTitleCase()}: {value}, {remainder}");
     }
 }
 
@@ -40,4 +40,13 @@ internal static class Arith
     public static void Swapper(ref int firstNumber, ref int secondNumber)
     => (firstNumber, secondNumber) = (secondNumber, firstNumber);
 
+}
+
+public static class StringExtension
+{
+    public static string ToTitleCase(this string s)
+    {
+        if (s is null || !s is string) return "";
+        return s[0..1].ToUpper() + s[1..].ToLower();
+    }
 }
