@@ -147,8 +147,9 @@ while getopts ${options} opt; do
             ;;
         c)
             echo "Creating csharp project namely: ${OPTARG}"
-            dotnet new console -n "${OPTARG}"
-            dotnet build "${OPTARG}"
+            my_filename="${OPTARG^}"
+            dotnet new console -n "${my_filename}"
+            dotnet build "${my_filename}"
             ;;
         C)
             mkdir "${OPTARG}"
