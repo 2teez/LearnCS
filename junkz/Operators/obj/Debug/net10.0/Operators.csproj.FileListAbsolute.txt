@@ -1,0 +1,14 @@
+/Users/timothyadigun/prac/genPrac/LearnCS/junkz/Operators/bin/Debug/net10.0/Operators
+/Users/timothyadigun/prac/genPrac/LearnCS/junkz/Operators/bin/Debug/net10.0/Operators.deps.json
+/Users/timothyadigun/prac/genPrac/LearnCS/junkz/Operators/bin/Debug/net10.0/Operators.runtimeconfig.json
+/Users/timothyadigun/prac/genPrac/LearnCS/junkz/Operators/bin/Debug/net10.0/Operators.dll
+/Users/timothyadigun/prac/genPrac/LearnCS/junkz/Operators/bin/Debug/net10.0/Operators.pdb
+/Users/timothyadigun/prac/genPrac/LearnCS/junkz/Operators/obj/Debug/net10.0/Operators.GeneratedMSBuildEditorConfig.editorconfig
+/Users/timothyadigun/prac/genPrac/LearnCS/junkz/Operators/obj/Debug/net10.0/Operators.AssemblyInfoInputs.cache
+/Users/timothyadigun/prac/genPrac/LearnCS/junkz/Operators/obj/Debug/net10.0/Operators.AssemblyInfo.cs
+/Users/timothyadigun/prac/genPrac/LearnCS/junkz/Operators/obj/Debug/net10.0/Operators.csproj.CoreCompileInputs.cache
+/Users/timothyadigun/prac/genPrac/LearnCS/junkz/Operators/obj/Debug/net10.0/Operators.dll
+/Users/timothyadigun/prac/genPrac/LearnCS/junkz/Operators/obj/Debug/net10.0/refint/Operators.dll
+/Users/timothyadigun/prac/genPrac/LearnCS/junkz/Operators/obj/Debug/net10.0/Operators.pdb
+/Users/timothyadigun/prac/genPrac/LearnCS/junkz/Operators/obj/Debug/net10.0/Operators.genruntimeconfig.cache
+/Users/timothyadigun/prac/genPrac/LearnCS/junkz/Operators/obj/Debug/net10.0/ref/Operators.dll

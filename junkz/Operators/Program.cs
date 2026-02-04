@@ -8,10 +8,13 @@
             Console.WriteLine(p.GetFullName);
             p += new[] { "clojure", "kotlin" };
             Console.WriteLine(p.GetFullName);
+            (var firstname, _) = p;
+            var p2 = new Person(firstname);
+            Console.WriteLine(p2);
         }
     }
 
-    class Person(string firstName, string lastName)
+    class Person(string firstName, string lastName = "")
     {
         private string FirstName { get; set; } = firstName;
         private string LastName { get; init; } = lastName;
