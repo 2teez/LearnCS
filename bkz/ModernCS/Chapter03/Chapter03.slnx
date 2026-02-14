@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Exer3.0/Exer3.0.csproj" />
+  <Project Path="Exer3.1/Exer3.1.csproj" />
   <Project Path="Operators/Operators.csproj" />
 </Solution>
