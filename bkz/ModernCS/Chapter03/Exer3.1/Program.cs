@@ -49,10 +49,11 @@ static class Checking
 {
     public static (bool, int) CheckRange(this int value, int lower = 0, int upper = 255)
     {
-        if (lower <= value && upper >= value)
-        {
-            return (true, value);
-        }
+
+        return (value >= lower && value <= upper, value);
+
+        // this was used delibrately
+        // it should have been a tuple (false, 0)
         throw new ArgumentOutOfRangeException(nameof(value));
     }
 }
