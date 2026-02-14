@@ -4,7 +4,7 @@ class Program
 {
     public static void Main(string[] args)
     {
-        var person = new { FirstName = "Gosling", LastName = "Java", Age = 40 };
+        Person person = new("Gosling", "Java", 40);
         var javaJson = $$"""
             {
                 "firstname": {{person.FirstName}},
@@ -14,7 +14,18 @@ class Program
         """;
 
         Console.WriteLine(javaJson);
+        person.LastName = "Clojure";
+        #region changing the lastname of the object
+        var clojureJson = $$"""
+             {
+                 "firstname": {{person.FirstName}},
+                 "lastname" : {{person.LastName}},
+                 "age": {{person.Age}},
+             }
+         """;
+        #endregion
+        Console.WriteLine(clojureJson);
     }
 }
 
-readonly record struct Person(string FirstName, string LastName, int Age);
+record struct Person(string FirstName, string LastName, int Age);
