@@ -9,7 +9,7 @@ function help() {
     echo "-a    create a cshtml file in a folder"
     echo "-b    build and run project name"
     echo "-c    create project name"
-    echo "-C    create a project folder, and a solution file and the project to the solution file."
+    echo "-C    create a project folder, and a solution file and add the project to the solution file."
     echo "-r    remove project bin folder"
     echo "-n    remove the entire project folder"
     echo "-p    add package from NuGet to the project"
