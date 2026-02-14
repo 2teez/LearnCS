@@ -19,6 +19,7 @@ class Program
     {
         var n when GetBoolValue(n, 15) => "FizzBuzz, ",
         var n when n % 3 == 0 => "Fizz, ",
+        var n when n % 5 == 0 && n == 100 => "Buzz ",  // Note this... a variation of the next case
         var n when n % 5 == 0 => "Buzz, ",
         _ => $"{number}, ",
     });
