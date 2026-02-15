@@ -17,7 +17,9 @@ static class IntegerExtension
 {
     public static bool IsPrime(this int value)
     {
-        for (int num = 2; num <= Math.Sqrt(value); num++)
+        if (value < 2) return false;
+        int limit = (int)Math.Sqrt(value);
+        for (int num = 2; num <= limit; num++)
         {
             if (value % num == 0)
             {
@@ -31,7 +33,8 @@ static class IntegerExtension
     {
         int myValue = value;
         int factor = 2;
-        do
+
+        while (myValue > 1)
         {
             if (myValue % factor == 0 && factor.IsPrime())
             {
@@ -39,7 +42,7 @@ static class IntegerExtension
                 myValue /= factor;
             }
             factor += 1;
-        } while (myValue > 0);
+        }
         WriteLine();
     }
 }
