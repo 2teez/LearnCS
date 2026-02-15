@@ -6,7 +6,7 @@ partial class Program
     private static void ConfigureConsole(
         string culture = "en-US",
         bool useComputerCulture = false,
-        bool showCulture = false
+        bool showCulture = true
     )
     {
         OutputEncoding = System.Text.Encoding.UTF8;
