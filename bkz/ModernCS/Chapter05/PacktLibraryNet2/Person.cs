@@ -4,4 +4,5 @@ public class Person : object
 {
     public string? Name;
     public DateTimeOffset Born;
+    public WondersOfTheAncientWorld FavoriteAncientWonder;
 }

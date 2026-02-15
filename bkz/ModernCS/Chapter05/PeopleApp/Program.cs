@@ -10,5 +10,8 @@ partial class Program
         bob.Name = "Bob Smith";
         bob.Born = new DateTimeOffset(1965, 12, 22, 16, 28, 0, TimeSpan.FromHours(-5));
         WriteLine($"{bob.Name} was born on {bob.Born:D}");
+        bob.FavoriteAncientWonder = WondersOfTheAncientWorld.StatueOfZeusAtOlympia;
+        //
+        WriteLine($"{bob.Name} favorite ancient wonder is {bob.FavoriteAncientWonder}. it Integer is {(int)bob.FavoriteAncientWonder}");
     }
 }
