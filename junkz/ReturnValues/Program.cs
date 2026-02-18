@@ -2,6 +2,8 @@
 
 using MyFruit = (string fruit, int number);
 
+using System;
+
 internal class Program
 {
     public static void Main(string[] args)
@@ -15,6 +17,24 @@ internal class Program
         Fruity mango = new() { Fruit = "Mango" };
         MyFruit mangoFruit = mango.GetFruit(); // here
         Console.WriteLine($"{mangoFruit.number}, {mangoFruit.fruit}");
+
+        #region calling internal/inner function
+        Console.WriteLine(Factorial(5));
+        #endregion calling internal/inner function
+    }
+
+    // using internal function
+    public static int Factorial(int number)
+    {
+        if (number < 0)
+            throw new ArgumentException("Wrong parameter..");
+        return innerFactorial(number);
+
+        static int innerFactorial(int number)
+        {
+            if (number == 0) return 1;
+            return number * innerFactorial(number - 1);
+        }
     }
 }
 
