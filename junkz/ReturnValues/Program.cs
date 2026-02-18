@@ -1,5 +1,7 @@
 ﻿namespace ReturnValues;
 
+using static System.Console;
+
 using MyFruit = (string fruit, int number);
 
 public class Program
