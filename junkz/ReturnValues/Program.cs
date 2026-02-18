@@ -1,5 +1,7 @@
 ﻿namespace ReturnValues;
 
+using MyFruit = (string fruit, int number);
+
 internal class Program
 {
     public static void Main(string[] args)
@@ -9,6 +11,10 @@ internal class Program
         Console.WriteLine($"{fruit}, {number}");
         (fruit, number) = myFruit.GetFruit("apple", 6);
         Console.WriteLine($"{fruit}, {number}");
+        // using the alias
+        Fruity mango = new() { Fruit = "Mango" };
+        MyFruit mangoFruit = mango.GetFruit(); // here
+        Console.WriteLine($"{mangoFruit.number}, {mangoFruit.fruit}");
     }
 }
 
