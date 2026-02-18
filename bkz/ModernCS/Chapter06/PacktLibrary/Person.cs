@@ -1,6 +1,1 @@
 ﻿namespace Packt.Shared;
-
-public class Class1
-{
-
-}
