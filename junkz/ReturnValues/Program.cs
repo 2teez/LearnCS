@@ -2,24 +2,22 @@
 
 using MyFruit = (string fruit, int number);
 
-using System;
-
-internal class Program
+public class Program
 {
     public static void Main(string[] args)
     {
         Fruity myFruit = new() { Fruit = "Easy-Peeler" };
         var (fruit, number) = myFruit.GetFruit();
-        Console.WriteLine($"{fruit}, {number}");
+        WriteLine($"{fruit}, {number}");
         (fruit, number) = myFruit.GetFruit("apple", 6);
-        Console.WriteLine($"{fruit}, {number}");
+        WriteLine($"{fruit}, {number}");
         // using the alias
         Fruity mango = new() { Fruit = "Mango" };
         MyFruit mangoFruit = mango.GetFruit(); // here
-        Console.WriteLine($"{mangoFruit.number}, {mangoFruit.fruit}");
+        WriteLine($"{mangoFruit.number}, {mangoFruit.fruit}");
 
         #region calling internal/inner function
-        Console.WriteLine(Factorial(5));
+        WriteLine(Factorial(5));
         #endregion calling internal/inner function
     }
 
