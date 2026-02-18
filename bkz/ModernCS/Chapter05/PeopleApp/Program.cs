@@ -13,5 +13,13 @@ partial class Program
         bob.FavoriteAncientWonder = WondersOfTheAncientWorld.StatueOfZeusAtOlympia;
         //
         WriteLine($"{bob.Name} favorite ancient wonder is {bob.FavoriteAncientWonder}. it Integer is {(int)bob.FavoriteAncientWonder}");
+        //
+        // using the book.cs file
+        Book book = new()
+        {
+            Isbn = "978-1803237800",
+            Title = "C# 12 and .NET 8 - Modern Cross-Platform Development Fundamentals"
+        };
+        WriteLine($"{book.Title} was written by {book.Author}, with {book.PageCount:N0} pages.");
     }
 }
