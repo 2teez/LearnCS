@@ -40,7 +40,7 @@ public class Person
 
     public void OutputSpouses()
     {
-        if (Married)
+        if (IsMarried)
         {
             string term = Spouses.Count == 1 ? "person" : "people";
             WriteLine($"{Name} is married to {Spouses.Count} {term}");
@@ -86,5 +86,17 @@ public class Person
     public Person ProcreateWith(Person partner)
     {
         return Procreate(this, partner);
+    }
+
+    // operator overload for Person class
+    public static bool operator +(Person p1, Person p2)
+    {
+        Marry(p1, p2);
+        return p1.IsMarried && p2.IsMarried;
+    }
+
+    public static Person operator *(Person p1, Person p2)
+    {
+        return Procreate(p1, p2);
     }
 }
